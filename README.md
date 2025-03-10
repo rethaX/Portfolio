@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
     <a href="https://chronark.com"><h1 align="center">chronark.com</h1></a>
 
@@ -31,3 +32,7 @@ pnpm dev
 ## Cloning / Forking
 
 Please remove all of my personal information (projects, images, etc.) before deploying your own version of this site.
+=======
+# Portfolio
+My personal portfolio website built with Next.js.
+>>>>>>> 31e495fb2052f3f83f7173594dc79bcdd3cde3b4
