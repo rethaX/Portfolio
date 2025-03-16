@@ -35,7 +35,7 @@ export default function About() {
             <div className="absolute inset-0 border-2 border-primary/50 rounded-lg transform translate-x-4 translate-y-4"></div>
             <div className="relative h-full w-full overflow-hidden rounded-lg shadow-xl">
               <Image
-                src="RethabileMokwanePhoto.jpg"
+                src="/RethabileMokwanePhoto.jpg" // Updated to use public directory
                 alt="Rethabile Mokwane"
                 fill
                 className="object-cover"
@@ -86,4 +86,3 @@ export default function About() {
     </section>
   )
 }
-
