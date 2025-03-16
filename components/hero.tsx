@@ -67,7 +67,7 @@ export default function Hero() {
   }
 
   // Letter animation for "Software Developer"
-  const titleLetters = "Software Developer".split("")
+  const titleLetters = "Rethabile Mokwane".split("")
 
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-white overflow-hidden">
@@ -189,7 +189,7 @@ export default function Hero() {
                 },
               }}
             >
-              Hi, I'm <span className="font-semibold">Rethabile Mokwane</span>
+              I'm a<span className="font-semibold">Software Developer</span>
             </motion.h2>
           </div>
 

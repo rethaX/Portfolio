@@ -60,7 +60,7 @@ export default function Projects() {
       title: "Data Comparison Tool",
       description:
         "Enhanced a data comparison tool to streamline database comparisons between DB2 and PostgreSQL, increasing migration efficiency.",
-      image: "https://www.freepnglogos.com/uploads/bmw-png-logo/bmw-logo-png-image-free-download-30.png",
+      image: "https://logohistory.net/wp-content/uploads/2023/01/BMW-Logo-1024x576.jpg",
       category: "Database",
       technologies: ["SQL", "DB2", "PostgreSQL", "AWS"],
       demoLink: "#",

@@ -19,11 +19,6 @@ export default function Education() {
       location: "Pretoria",
       period: "2020 - 2022",
       details: [
-        "Completed a comprehensive undergraduate program focused on software development, system design, and IT solutions.",
-        "Gained proficiency in programming languages such as Java, Python, and C#, and developed web and mobile application development skills.",
-        "Studied key concepts including software development lifecycle (SDLC), object-oriented programming (OOP), database management, and agile methodologies.",
-        "Completed hands-on projects and a capstone project, applying theoretical knowledge to real-world software engineering challenges.",
-        "Developed strong problem-solving, teamwork, and project management skills, preparing for a software engineering and IT career.",
       ],
     },
     {
@@ -32,8 +27,6 @@ export default function Education() {
       location: "Pretoria",
       period: "2015 - 2019",
       details: [
-        "Achieved a Bachelor's Degree Pass in Matric, meeting the requirements for tertiary education.",
-        "Developed foundational skills in mathematics and technology, which laid the groundwork for further studies in IT and software engineering.",
       ],
     },
   ]
@@ -49,19 +42,19 @@ export default function Education() {
       title: "Academic Excellence Award",
       year: "2021",
       description:
-        "Recognized as a top performer at Eduvos University for outstanding academic achievement in software engineering coursework and practical applications.",
+        "Recognized as a top performer at Eduvos University for software engineering coursework and practical applications.",
     },
     {
       title: "Creative Excellence in Visual Arts",
       year: "2018",
       description:
-        "Awarded for exceptional creativity and technical skill in Visual Arts, showcasing innovative thinking and attention to detail.",
+        "Awarded for exceptional creativity and technical skill showcasing innovative thinking and attention to detail.",
     },
     {
       title: "Leadership & Personal Development Recognition",
       year: "2018",
       description:
-        "Acknowledged for excellence in Life Orientation, demonstrating strong leadership qualities, interpersonal skills, and commitment to personal growth.",
+        "Acknowledged demonstrating strong leadership qualities, interpersonal skills, and commitment to personal growth.",
     },
   ]
 

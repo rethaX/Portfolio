@@ -27,7 +27,7 @@ export default function Contact() {
     {
       icon: <MapPin className="w-6 h-6 text-primary" />,
       title: "Location",
-      value: "123 Main Street, Centurion, Gauteng, South Africa",
+      value: "7177 Blue Blossom Street, Wierda Crest, Rooihuiskraal North Centurion, 0157, Gauteng, South Africa",
       link: null, // No hyperlink
     },
   ]

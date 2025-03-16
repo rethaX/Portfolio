@@ -35,7 +35,7 @@ export default function About() {
             <div className="absolute inset-0 border-2 border-primary/50 rounded-lg transform translate-x-4 translate-y-4"></div>
             <div className="relative h-full w-full overflow-hidden rounded-lg shadow-xl">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Rethabile%20Mokwane%20Photo.jpg-thwu5eCJK8nxI77VIr4e1PwvCnSmCb.jpeg"
+                src="picture\Rethabile Mokwane Photo.jpg"
                 alt="Rethabile Mokwane"
                 fill
                 className="object-cover"
@@ -52,7 +52,7 @@ export default function About() {
           >
             <h3 className="text-2xl font-bold mb-4 text-gray-900">Who I Am</h3>
             <p className="text-gray-700 mb-6">
-              Motivated Software Developer with 2 years of experience in Java, Python, SQL, AWS, Docker, and REST
+              I Motivated Software Developer with 2 years of experience in Java, Python, SQL, AWS, Docker, and REST
               services. Proficient in web development (HTML, CSS, Angular) and back-end frameworks (Spring Boot,
               Jakarta). Delivered projects like Handy Man in One Hand app and BMW data migration, improving system
               performance and data accuracy. Skilled in data analysis, database management (DB2, PostgreSQL), and
@@ -70,7 +70,10 @@ export default function About() {
               </div>
               <div>
                 <h4 className="font-bold text-gray-900">Location:</h4>
-                <p className="text-gray-700">Centurion, South Africa</p>
+                <p className="text-gray-700">7177 Blue Blossom Street, WierdaCrest, 
+                  Rooihuiskraal North Centurion, 
+                  0157, 
+                  South Africa</p>
               </div>
               <div>
                 <h4 className="font-bold text-gray-900">Availability:</h4>
