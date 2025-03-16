@@ -189,7 +189,7 @@ export default function Hero() {
                 },
               }}
             >
-              I'm a<span className="font-semibold">Software Developer</span>
+              a <span className="font-semibold">Software Developer</span>
             </motion.h2>
           </div>
 
