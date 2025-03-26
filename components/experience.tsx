@@ -1,0 +1,202 @@
+"use client"
+
+import { motion } from "framer-motion"
+import { useInView } from "react-intersection-observer"
+import { Card, CardContent } from "@/components/ui/card"
+import { Briefcase, Calendar, MapPin, Code, Server, Database } from "lucide-react"
+import { BackgroundPattern, GradientBlob } from "./visual-elements"
+
+export default function Experience() {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  })
+
+  const experiences = [
+    {
+      title: "Software Developer",
+      company: "Digilink (Client: BMW)",
+      location: "Johannesburg",
+      period: "April 2024 - Present",
+      icon: <Code className="h-6 w-6" />,
+      color: "bg-black",
+      responsibilities: [
+        "Designed and optimized SQL queries for DB2 and PostgreSQL databases, ensuring accurate data migration and functionality.",
+        "Analyzed and aligned datasets between DB2 and PostgreSQL, resolving duplications and improving data quality.",
+        "Enhanced a data comparison tool to streamline database comparisons, increasing migration efficiency.",
+        "Utilized AWS tools (Glue, Athena, EC2) for data integration and migration preparation, ensuring seamless processing.",
+        "Developed and deployed a Docker container for the data comparison tool, enabling smooth integration with REST services on the Payara server.",
+        "Created scripts for Payara server and database connections, improving system reliability and performance.",
+        "Optimized code for better security, scalability, and performance, ensuring sustainable system operations.",
+      ],
+    },
+    {
+      title: "ICT Teacher's Assistant",
+      company: "Northridge Primary School",
+      location: "Pretoria",
+      period: "February 2023 - December 2023",
+      icon: <Server className="h-6 w-6" />,
+      color: "bg-gray-800",
+      responsibilities: [
+        "Provided technical support for IT equipment, ensuring functionality for teachers and learners.",
+        "Assisted in implementing coding and robotics curricula and managed educational applications on devices.",
+        "Captured and maintained learner data on the SA-SAMS/CEMIS platform.",
+        "Maintained a register of ICT resources, including device details and support needs.",
+        "Distributed ICT resources and supported administrative tasks with organized filing systems.",
+      ],
+    },
+  ]
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  }
+
+  return (
+    <section id="experience" className="py-20 bg-white relative overflow-hidden">
+      <BackgroundPattern pattern="grid" opacity={0.05} />
+      <GradientBlob
+        className="w-1/3 h-1/3 -bottom-10 -right-10"
+        colors={["from-black/10", "via-gray-400/5", "to-gray-500/10"]}
+      />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Work Experience</h2>
+          <div className="w-20 h-1 bg-black mx-auto mb-6"></div>
+          <p className="max-w-2xl mx-auto text-gray-700">
+            My professional journey and the valuable experience I've gained along the way.
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="space-y-12 max-w-5xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          ref={ref}
+        >
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover={{ x: 5 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
+              <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow bg-white">
+                <CardContent className="p-0">
+                  <div className="flex flex-col lg:flex-row">
+                    {/* Left side with timeline */}
+                    <div className="w-full lg:w-1/3 p-6 relative">
+                      <div className={`${exp.color} text-white p-4 rounded-lg shadow-md`}>
+                        <div className="flex items-center mb-4">
+                          <motion.div
+                            animate={{
+                              rotate: [0, 10, 0, -10, 0],
+                            }}
+                            transition={{
+                              duration: 5,
+                              repeat: Number.POSITIVE_INFINITY,
+                              repeatType: "loop",
+                              ease: "easeInOut",
+                            }}
+                            className="mr-3"
+                          >
+                            <Briefcase className="h-6 w-6" />
+                          </motion.div>
+                          <h3 className="text-xl font-bold">{exp.title}</h3>
+                        </div>
+
+                        <div className="space-y-3">
+                          <div className="flex items-center">
+                            <Calendar className="h-4 w-4 mr-2 opacity-80" />
+                            <p>{exp.period}</p>
+                          </div>
+                          <div className="flex items-center">
+                            <MapPin className="h-4 w-4 mr-2 opacity-80" />
+                            <p>{exp.location}</p>
+                          </div>
+                          <div className="flex items-center">
+                            <Database className="h-4 w-4 mr-2 opacity-80" />
+                            <p className="font-medium">{exp.company}</p>
+                          </div>
+                        </div>
+
+                        {/* Animated icon */}
+                        <motion.div
+                          className="absolute bottom-4 right-4 text-white/20"
+                          animate={{
+                            scale: [1, 1.2, 1],
+                            rotate: [0, 10, 0],
+                          }}
+                          transition={{
+                            duration: 4,
+                            repeat: Number.POSITIVE_INFINITY,
+                            repeatType: "reverse",
+                          }}
+                        >
+                          {exp.icon}
+                        </motion.div>
+                      </div>
+                    </div>
+
+                    {/* Right side with responsibilities */}
+                    <div className="p-6 lg:p-8 flex-1 border-t lg:border-t-0 lg:border-l border-gray-100">
+                      <h4 className="text-lg font-semibold mb-4 text-gray-900 flex items-center">
+                        <motion.div
+                          animate={{
+                            x: [0, 3, 0],
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Number.POSITIVE_INFINITY,
+                            repeatType: "reverse",
+                          }}
+                          className="mr-2"
+                        >
+                          <Code className="h-5 w-5 text-black" />
+                        </motion.div>
+                        Key Responsibilities
+                      </h4>
+                      <ul className="space-y-3 list-disc pl-5">
+                        {exp.responsibilities.map((resp, i) => (
+                          <motion.li
+                            key={i}
+                            className="text-gray-700"
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: i * 0.1 + 0.5 }}
+                            whileHover={{ x: 5 }}
+                          >
+                            {resp}
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
