@@ -9,7 +9,7 @@ import Navbar from "./navbar"
 export default function Hero() {
   const [mounted, setMounted] = useState(false)
   const [text, setText] = useState("")
-  const fullText = "Software Developer"
+  const fullText = "Rethabile Mokwane"
   const textRef = useRef<HTMLHeadingElement>(null)
 
   useEffect(() => {
@@ -217,7 +217,7 @@ export default function Hero() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Hi, I'm <span className="font-bold">Rethabile Mokwane</span>
+            I'm <span className="font-bold">Junior Java Developer</span>
           </motion.h2>
 
           {/* Description */}
@@ -278,7 +278,7 @@ export default function Hero() {
               repeatType: "reverse",
             }}
           >
-            <span className="mb-2 text-sm">Scroll Down</span>
+            <span className="mb-0 text-sm mt-100"></span>
             <ArrowDown className="animate-bounce" />
           </motion.button>
         </motion.div>

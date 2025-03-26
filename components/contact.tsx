@@ -27,7 +27,7 @@ export default function Contact() {
     {
       icon: <MapPin className="w-6 h-6 text-primary" />,
       title: "Location",
-      value: "123 Main Street, Centurion, Gauteng, South Africa",
+      value: "7177 Blue Blossom Street, Rooihuiskraal North Centurion, Gauteng, South Africa",
       link: null, // No hyperlink
     },
   ]
@@ -70,7 +70,7 @@ export default function Contact() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Get In Touch</h2>
           <div className="w-20 h-1 bg-black mx-auto mb-6"></div>
           <p className="max-w-2xl mx-auto text-gray-700">
-            Have a project in mind or want to discuss potential opportunities? Feel free to reach out to me through my
+            Feel free to reach out to me through my
             contact information below.
           </p>
 

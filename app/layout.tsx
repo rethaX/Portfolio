@@ -24,10 +24,10 @@ const dancingScript = Dancing_Script({
 })
 
 export const metadata = {
-  title: "Rethabile Mokwane | Software Developer",
+  title: "Software Developer | Rethabile Mokwane",
   description:
     "Professional portfolio of Rethabile Mokwane, Software Developer specializing in Java, Python, SQL, and web development",
-    generator: 'v0.dev'
+    
 }
 
 export default function RootLayout({

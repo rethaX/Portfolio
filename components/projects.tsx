@@ -23,7 +23,7 @@ export default function Projects() {
       title: "Handy Man In One Hand",
       description:
         "A mobile app developed using Android Studio and Java to connect users with local services. Integrated Firebase for real-time data management.",
-      image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop",
+      image: "/HandyManApp.jpg",
       category: "Mobile",
       technologies: ["Android Studio", "Java", "Firebase", "UI/UX Design"],
       demoLink: "#",
@@ -35,7 +35,7 @@ export default function Projects() {
       title: "Mobile Cars Shop",
       description:
         "An e-commerce website built using HTML, CSS, and JavaScript for a car dealership. Designed a responsive interface for seamless user experience across devices.",
-      image: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=2070&auto=format&fit=crop",
+      image: "/MobileCarShop.jpg",
       category: "Web",
       technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
       demoLink: "#",
@@ -47,7 +47,7 @@ export default function Projects() {
       title: "Church Database System",
       description:
         "A database system designed using PHPMyAdmin to manage church records efficiently. Created an intuitive interface with HTML and CSS for easy data access.",
-      image: "https://images.unsplash.com/photo-1550305080-4e029753abcf?q=80&w=2071&auto=format&fit=crop",
+      image: "/ChurchDatabase.jpg",
       category: "Database",
       technologies: ["PHPMyAdmin", "HTML", "CSS", "Database Design"],
       demoLink: "#",
@@ -59,7 +59,7 @@ export default function Projects() {
       title: "Data Comparison Tool",
       description:
         "Enhanced a data comparison tool to streamline database comparisons between DB2 and PostgreSQL, increasing migration efficiency.",
-      image: "https://www.freepnglogos.com/uploads/bmw-png-logo/bmw-logo-png-image-free-download-30.png",
+      image: "/DataComparison.jpg",
       category: "Database",
       technologies: ["SQL", "DB2", "PostgreSQL", "AWS"],
       demoLink: "#",
@@ -166,7 +166,7 @@ export default function Projects() {
               <Card className="overflow-hidden h-full hover:shadow-lg transition-all group border border-black bg-white">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image}
                     alt={project.title}
                     fill
                     className={`object-cover transition-transform duration-500 group-hover:scale-110 ${project.id === 4 ? "object-contain p-4" : ""}`}
@@ -232,4 +232,3 @@ export default function Projects() {
     </section>
   )
 }
-
