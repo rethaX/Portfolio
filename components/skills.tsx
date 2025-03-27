@@ -15,7 +15,7 @@ export default function Skills() {
     {
       category: "Programming Languages",
       icon: <Code className="w-10 h-10 text-black" />,
-      items: ["Java", "Python", "SQL", "JavaScript", "TypeScript"],
+      items: ["Java", "Python", "SQL", "JavaScript", "TypeScript", "Maven"],
     },
     {
       category: "Web Development",
@@ -25,12 +25,12 @@ export default function Skills() {
     {
       category: "Back-End Development",
       icon: <Server className="w-10 h-10 text-black" />,
-      items: ["REST Services", "Spring Boot", "Back-End Frameworks"],
+      items: ["REST Services", "API Integration", "Spring Boot", "Back-End Frameworks", "Jakarta"],
     },
     {
       category: "Cloud & DevOps",
       icon: <Workflow className="w-10 h-10 text-black" />,
-      items: ["AWS (Glue, Athena, EC2)", "Docker", "Git"],
+      items: ["AWS (Glue, Athena, EC2)", "Docker", "Git", "Payara Server"],
     },
     {
       category: "Database Management",
@@ -40,7 +40,7 @@ export default function Skills() {
     {
       category: "Testing & Automation",
       icon: <Smartphone className="w-10 h-10 text-black" />,
-      items: ["Testing Automation", "Chrome Driver", "Quality Assurance"],
+      items: ["Selenium", "Cucumber"],
     },
   ]
 
