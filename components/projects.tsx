@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ExternalLink, Github, Layers } from "lucide-react"
+import { ArrowDown, ExternalLink, Github, Layers } from "lucide-react"
 
 export default function Projects() {
   const [ref, inView] = useInView({
@@ -228,6 +228,24 @@ export default function Projects() {
             </motion.div>
           ))}
         </motion.div>
+
+{/* Centered Arrow Down at the bottom of the section */}
+<div className="flex justify-center mt-11">
+          <motion.div
+            animate={{ 
+              y: [0, 10, 0],
+              opacity: [0.6, 1, 0.6]
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            <ArrowDown className="h-7 w-8 text-gray-700" />
+          </motion.div>
+        </div>
+
       </div>
     </section>
   )

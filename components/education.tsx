@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { Card, CardContent } from "@/components/ui/card"
-import { GraduationCap, Calendar, MapPin, BookOpen, School } from "lucide-react"
+import { GraduationCap, Calendar, MapPin, BookOpen, School, ArrowDown } from "lucide-react"
 import { BackgroundPattern, GradientBlob } from "./visual-elements"
 
 export default function Education() {
@@ -129,6 +129,22 @@ export default function Education() {
             ))}
           </div>
         </motion.div>
+        {/* Centered Arrow Down at the bottom of the section */}
+        <div className="flex justify-center mt-11">
+          <motion.div
+            animate={{ 
+              y: [0, 10, 0],
+              opacity: [0.6, 1, 0.6]
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            <ArrowDown className="h-7 w-8 text-gray-700" />
+          </motion.div>
+        </div>
       </div>
     </section>
   )

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { Download, FileText } from "lucide-react"
+import { ArrowDown, Download, FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function About() {
@@ -12,7 +12,7 @@ export default function About() {
   })
 
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-20 bg-gray-50 relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -128,7 +128,7 @@ export default function About() {
                 </motion.div>
               </div>
 
-              {/* Download CV Button - Updated with correct path */}
+              {/* Download CV Button */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -163,6 +163,23 @@ export default function About() {
               </motion.div>
             </motion.div>
           </div>
+        </div>
+
+        {/* Centered Arrow Down at the bottom of the section */}
+        <div className="flex justify-center mt-11">
+          <motion.div
+            animate={{ 
+              y: [0, 10, 0],
+              opacity: [0.6, 1, 0.6]
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            <ArrowDown className="h-7 w-8 text-gray-700" />
+          </motion.div>
         </div>
       </div>
     </section>

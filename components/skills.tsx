@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { Card, CardContent } from "@/components/ui/card"
-import { Code, Database, Layout, Server, Smartphone, Workflow, Zap } from "lucide-react"
+import { ArrowDown, Code, Database, Layout, Server, Smartphone, Workflow, Zap } from "lucide-react"
 
 export default function Skills() {
   const [ref, inView] = useInView({
@@ -162,6 +162,23 @@ export default function Skills() {
             </motion.div>
           ))}
         </motion.div>
+
+      {/* Centered Arrow Down at the bottom of the section */}
+      <div className="flex justify-center mt-11">
+          <motion.div
+            animate={{ 
+              y: [0, 10, 0],
+              opacity: [0.6, 1, 0.6]
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            <ArrowDown className="h-7 w-8 text-gray-700" />
+          </motion.div>
+        </div>  
       </div>
     </section>
   )
