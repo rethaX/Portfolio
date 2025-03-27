@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -11,6 +11,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
   const [hoverItem, setHoverItem] = useState<string | null>(null)
+  const mobileMenuRef = useRef<HTMLDivElement>(null)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,9 +37,49 @@ export default function Navbar() {
       })
     }
 
+    // Close mobile menu when clicking outside
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node) &&
+        menuButtonRef.current &&
+        !menuButtonRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false)
+      }
+    }
+
+    // Close mobile menu on resize (if screen becomes larger)
+    const handleResize = () => {
+      if (window.innerWidth >= 768 && isOpen) {
+        setIsOpen(false)
+      }
+    }
+
     window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    document.addEventListener("mousedown", handleClickOutside)
+    window.addEventListener("resize", handleResize)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+      document.removeEventListener("mousedown", handleClickOutside)
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [isOpen])
+
+  // Add this effect to toggle body class when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("menu-open")
+    } else {
+      document.body.classList.remove("menu-open")
+    }
+
+    return () => {
+      document.body.classList.remove("menu-open")
+    }
+  }, [isOpen])
 
   const scrollToSection = (sectionId: string) => {
     setIsOpen(false)
@@ -65,7 +107,7 @@ export default function Navbar() {
   return (
     <motion.nav
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300",
         scrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-2" : "bg-transparent py-4",
       )}
       initial={{ y: -100 }}
@@ -113,7 +155,8 @@ export default function Navbar() {
 
         {/* Mobile Navigation Toggle */}
         <motion.button
-          className="md:hidden text-gray-800"
+          ref={menuButtonRef}
+          className="md:hidden text-gray-800 z-50"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
           whileHover={{ scale: 1.1 }}
@@ -127,20 +170,21 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden fixed top-[60px] left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg py-4 px-4 z-50 max-h-[80vh] overflow-y-auto"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            ref={mobileMenuRef}
+            className="md:hidden fixed inset-0 bg-white z-40 pt-20"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
           >
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col h-full overflow-y-auto">
               {navLinks.map((link, index) => (
                 <motion.button
                   key={link.name}
                   onClick={() => scrollToSection(link.href)}
                   className={cn(
-                    "text-gray-800 hover:text-primary transition-colors py-3 font-medium text-left border-b border-gray-100",
-                    activeSection === link.href && "text-primary",
+                    "text-gray-800 hover:text-primary transition-colors py-4 px-6 font-medium text-left border-b border-gray-100",
+                    activeSection === link.href && "text-primary bg-gray-50",
                   )}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}

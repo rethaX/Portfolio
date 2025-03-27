@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
+import { Download, FileText } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export default function About() {
   const [ref, inView] = useInView({
@@ -125,6 +127,40 @@ export default function About() {
                   <p className="text-gray-700">Available for hire</p>
                 </motion.div>
               </div>
+
+              {/* Download CV Button - Updated with correct path */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="mt-6"
+              >
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Button
+                    className="bg-black hover:bg-gray-800 text-white font-mono group relative overflow-hidden"
+                    size="lg"
+                    asChild
+                  >
+                    <a href="/RethabileMokwaneSoftwareDeveloper.pdf" download="RethabileMokwane_SoftwareDeveloper_CV.pdf">
+                      <motion.span
+                        className="absolute inset-0 w-full h-full bg-gray-700 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"
+                        initial={false}
+                      />
+                      <span className="relative flex items-center">
+                        <FileText className="mr-2 h-5 w-5" />
+                        <span>Download CV</span>
+                        <motion.span
+                          className="ml-2"
+                          animate={{ y: [0, -3, 0] }}
+                          transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
+                        >
+                          <Download className="h-4 w-4" />
+                        </motion.span>
+                      </span>
+                    </a>
+                  </Button>
+                </motion.div>
+              </motion.div>
             </motion.div>
           </div>
         </div>

@@ -27,7 +27,7 @@ export default function Footer() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          Built with Next.js and Tailwind CSS
+    
         </motion.p>
       </div>
     </motion.footer>
