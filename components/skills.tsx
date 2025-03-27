@@ -42,6 +42,11 @@ export default function Skills() {
       icon: <Smartphone className="w-10 h-10 text-black" />,
       items: ["Selenium", "Cucumber"],
     },
+    {
+      category: "Project Management",
+      icon: <Workflow className="w-10 h-10 text-black" />,
+      items: ["Jira", "Confluence", "Airflow"],
+    },
   ]
 
   const containerVariants = {
