@@ -20,6 +20,13 @@ export default function Certifications() {
         "Professional certification validating expertise in data analysis and visualization using Microsoft Power BI, demonstrating ability to transform complex data into actionable insights.",
       type: "professional",
     },
+    {
+      title: "AWS Cloud Practitioner Certificate",
+      year: "2025 (In Progress)",
+      description:
+        "Foundational certification validating essential knowledge of AWS Cloud services, architecture, and core concepts. Demonstrates understanding of key AWS infrastructure, security and compliance principles, pricing models, and cloud economics, with the ability to articulate the business value of AWS solutions and make informed decisions for cloud-based initiatives.",
+      type: "professional",
+    },
   ]
 
   const awards = [
