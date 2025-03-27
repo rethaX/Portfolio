@@ -217,7 +217,7 @@ export default function Hero() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            a<span className="font-bold">Junior Java Developer</span>
+            a <span className="font-bold">Junior Java Developer</span>
           </motion.h2>
 
           {/* Description */}
