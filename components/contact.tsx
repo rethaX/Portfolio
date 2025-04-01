@@ -172,7 +172,7 @@ export default function Contact() {
                   </svg>
                 </motion.a>
                 <motion.a
-                  href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BdCt%2F5rwsTpWO6lk4vsWLRw%3D%3D"
+                  href="https://www.linkedin.com/in/rethabile-mokwane-information-technology"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-gradient-to-br from-black/20 to-gray-600/20 flex items-center justify-center text-primary hover:from-black hover:to-gray-600 hover:text-white transition-colors"
