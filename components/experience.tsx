@@ -47,7 +47,7 @@ export default function Experience() {
       location: "Pretoria",
       period: "February 2023 - February 2023",
       icon: <Code className="h-6 w-6" />,
-      color: "bg-gray-800",
+      color: "bg-black",
       responsibilities: [
         "Technical Troubleshooting: Resolved hardware/software issues for users, improving system uptime.",
         "Software Deployment: Assisted in deploying and configuring educational applications, ensuring compatibility across devices.",

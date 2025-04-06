@@ -25,10 +25,9 @@ export default function Certifications() {
     },
     {
       title: "Full Stack Java, JSP, Hibernate, Spring, Web-services/Restful API",
-      year: "2025 (In Progress)",
+      year: "2025",
      type: "professional",
     },
-
   ]
 
   const awards = [
