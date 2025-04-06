@@ -40,7 +40,7 @@ export default function Experience() {
         "Practiced design patterns (Singleton, Factory) and Spring Boot integrations to build scalable microservice prototypes.",
         "Built a Spring Boot microservice with JWT authentication, deployed via Docker containers.",
       ],
-    }
+    },
     {
       title: "ICT Support Intern",
       company: "Northridge Primary School",
@@ -224,4 +224,3 @@ export default function Experience() {
     </section>
   )
 }
-
