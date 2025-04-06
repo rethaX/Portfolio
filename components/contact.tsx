@@ -27,7 +27,7 @@ export default function Contact() {
     {
       icon: <MapPin className="w-6 h-6 text-primary" />,
       title: "Location",
-      value: "7177 Blue Blossom Street, Rooihuiskraal North Centurion, Gauteng, South Africa",
+      value: "Johannesburg, Gauteng, 2001 South Africa",
       link: null, // No hyperlink
     },
   ]

@@ -120,7 +120,7 @@ export default function About() {
                 </motion.div>
                 <motion.div whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
                   <h4 className="font-bold text-gray-900">Location:</h4>
-                  <p className="text-gray-700">North Centurion, South Africa</p>
+                  <p className="text-gray-700">Braamfontein Johannesburg, 2001 South Africa</p>
                 </motion.div>
                 <motion.div whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
                   <h4 className="font-bold text-gray-900">Availability:</h4>
