@@ -100,12 +100,11 @@ export default function About() {
             >
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Who Am I</h3>
               <p className="text-gray-700 mb-6">
-                Motivated Software Developer with 2 years of experience in Java, Python, SQL, AWS, Docker, and REST
-                services. Proficient in web development (HTML, CSS, Angular) and back-end frameworks (Spring Boot,
-                Jakarta). Delivered projects like Handy Man in One Hand app and BMW data migration, improving system
-                performance and data accuracy. Skilled in data analysis, database management (DB2, PostgreSQL), and
-                testing automation. Passionate about solving complex problems, optimizing code for scalability and
-                security, and contributing to impactful software projects.
+              Junior Java Developer with 2+ years of experience in backend development and software engineering. 
+              Proficient in Java EE, Spring Boot, and AWS integrations, with a track record of optimizing data processing. 
+              Combines technical expertise with hands-on IT support experience, ensuring robust and user-centric solutions. 
+              Passionate about solving complex problems, optimizing code for scalability and security, and contributing to impactful software projects.
+
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 <motion.div whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
