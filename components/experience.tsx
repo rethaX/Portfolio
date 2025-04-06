@@ -46,7 +46,7 @@ export default function Experience() {
       company: "Northridge Primary School",
       location: "Pretoria",
       period: "February 2023 - February 2023",
-      icon: <Server className="h-6 w-6" />,
+      icon: <Code className="h-6 w-6" />,
       color: "bg-gray-800",
       responsibilities: [
         "Technical Troubleshooting: Resolved hardware/software issues for users, improving system uptime.",

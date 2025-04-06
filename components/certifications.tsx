@@ -14,41 +14,37 @@ export default function Certifications() {
 
   const certifications = [
     {
-      title: "Microsoft Certified: Data Analyst Associate",
+      title: "Microsoft Certified: Data Analyst Associate with Power BI",
       year: "2023",
-      description:
-        "Professional certification validating expertise in data analysis and visualization using Microsoft Power BI, demonstrating ability to transform complex data into actionable insights.",
       type: "professional",
     },
     {
-      title: "AWS Cloud Practitioner Certificate",
-      year: "2025 (In Progress)",
-      description:
-        "Foundational certification validating essential knowledge of AWS Cloud services, architecture, and core concepts. Demonstrates understanding of key AWS infrastructure, security and compliance principles, pricing models, and cloud economics, with the ability to articulate the business value of AWS solutions and make informed decisions for cloud-based initiatives.",
+      title: "Digilink Software Developer Skills Programme",
+      year: "2025",
       type: "professional",
     },
+    {
+      title: "Full Stack Java, JSP, Hibernate, Spring, Web-services/Restful API",
+      year: "2025 (In Progress)",
+     type: "professional",
+    },
+
   ]
 
   const awards = [
     {
       title: "Academic Excellence Award",
       year: "2021",
-      description:
-        "Recognized as a top performer at Eduvos University for outstanding academic achievement in software engineering coursework and practical applications.",
       type: "academic",
     },
     {
       title: "Creative Excellence in Visual Arts",
       year: "2018",
-      description:
-        "Awarded for exceptional creativity and technical skill in Visual Arts, showcasing innovative thinking and attention to detail.",
       type: "academic",
     },
     {
       title: "Leadership & Personal Development Recognition",
       year: "2018",
-      description:
-        "Acknowledged for excellence in Life Orientation, demonstrating strong leadership qualities, interpersonal skills, and commitment to personal growth.",
       type: "academic",
     },
   ]
