@@ -30,7 +30,7 @@ export default function Skills() {
     {
       category: "Cloud & DevOps",
       icon: <Workflow className="w-10 h-10 text-black" />,
-      items: ["AWS (Glue, Athena, EC2)", "Docker", "Git", "Payara Server"],
+      items: ["AWS (Glue, Athena, EC2)", "Docker", "Git", "Payara Server, Airflow"],
     },
     {
       category: "Database Management",
