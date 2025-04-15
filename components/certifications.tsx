@@ -14,8 +14,8 @@ export default function Certifications() {
 
   const certifications = [
     {
-      title: "Microsoft Certified: Data Analyst Associate with Power BI",
-      year: "2023",
+      title: "Rest API (Intermediate)",
+      year: "2025",
       type: "professional",
     },
     {
